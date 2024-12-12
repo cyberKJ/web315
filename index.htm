@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome class</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {font-family: "Lato", sans-serif}
+    </style>
+</head>
+
+<body>
+<nav class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.htm" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="contact.htm" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">Examples <i class="fa fa-caret-down"></i></button>     
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="basics.htm" class="w3-bar-item w3-button">JS Basics</a>
+        <a href="mediaq.htm" class="w3-bar-item w3-button">Media Queries</a>
+        <a href="func4.htm" class="w3-bar-item w3-button">Functions</a>
+        <a href="formfields.htm" class="w3-bar-item w3-button">Form Input types</a>
+        <a href="userMap.htm" class="w3-bar-item w3-button">Map</a>
+        <a href="browserCheck.htm" class="w3-bar-item w3-button">Check Browser</a>
+        <a href="cookie.htm" class="w3-bar-item w3-button">Cookie</a>
+        <a href="userMap.htm" class="w3-bar-item w3-button">Map</a>
+        <a href="api.htm" class="w3-bar-item w3-button">Weather API</a>
+        </div>
+      </div>
+      </div>
+</nav>
+<div class="w3-content" style="max-width:2000px;margin-top:46px"></div>
+<div class="w3-container w3-center">
+    <h1 style = "color:gray;" class="w3-cursive">Welcome to CSCN 315!</h1>
+    <h2 class="w3-cursive"></h2>
+    </div>
+    <button onclick="myFun('text')" class="w3-btn w3-block w3-black w3-center">
+        Front-end Programming in JavaScript</button>
+    <div id="text" class="w3-container w3-hide">
+   <h3>
+    This course teaches the concept of progressive enhancement 
+    (simple to complex) through the use of front-end programming 
+    techniques using JavaScript and jQuery.<br><br>
+    </h3>
+   <h2>Prerequisite: CSCN 111 or CSIS 111 or CSIS 212 or BMIT 212</h2>
+    </div>
+<div class="w3-container w3-center">
+<h2>Professor Kristi Smith</h2>
+<div w3-center">
+<img src="lu.png" width="20%" height="20%">
+</div>
+<br>
+<br>
+<footer class="w3-container w3-black w3-bottom w3-center"> 
+    <p id = "demo"></p>
+<script>
+   function myFun(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+const d = new Date().toLocaleDateString('en-us',{weekday:"long", year:"numeric", month:"short", day:"numeric"});
+    document.getElementById("demo").innerHTML= d;
+</script>
+</footer>
+</body>
+</html>
